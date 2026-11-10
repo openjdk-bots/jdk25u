@@ -57,6 +57,8 @@ runs:
         mkdir ../installed
         mv build/images/jtreg/* ../installed
       working-directory: jtreg/src
+      env:
+        CODE_TOOLS_URL_BASE: https://github.com/openjdk
       shell: bash
       if: (steps.get-cached.outputs.cache-hit != 'true')
 
